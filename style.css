@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Xanh Mono", monospace;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/*=======================Banner=================================*/
+
+header.inicial {
+  width: 100%;
+  min-height: 400px;
+  background-color:rgb(159, 72, 218);
+  background-image:url(../imagens/Fundo.svg);
+  background-position: center;
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+  color: rgb(167, 142, 179);
+  text-align: center;
+  font-size:8vw;
+  padding-top: 90px;
+}
+
+header.inicial h3::after{
+  content:'|';
+  margin-left:5px;
+  opacity:1;
+  animation: piscar .7s infinite;
+
+}
+
+@keyframes piscar{
+0%, 100%{
+  opacity:1;
+}
+50%{
+  opacity:0;
+}
+
+}
+
+main.Meio {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sr-only{
+  position: absolute;
+  width:1px;
+  height:1px;
+  margin:-1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width:0;
+
+}
+
+main .container {
+  position: relative;
+  top: -100pt;
+}
+
+main .container h2:nth-of-type(1) {
+  color: rgb(209, 204, 216);
+}
+
+main.Meio section.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 50px auto;
+  border-radius: 5px;
+}
+
+/*=======================Crads =================================*/
+section.content .card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+
+  width: 33.3%;
+  padding-top: calc(33.3% / 5);
+  margin-right:10pt;
+  border-radius: 5px;
+  padding: 4%;
+  background-color:rgb(209, 204, 216);
+  z-index: 9;
+}
+
+
+.red p {
+  color:red;
+}
+
+section.content .card img {
+  position: absolute;
+  top:25pt;
+  right: 30pt;
+  width: 30px;
+  color: rgb(7, 75, 7);
+}
+.card p {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left:-30pt;
+}
+
+.card h3 {
+  margin-bottom: 60pt;
+  display: flex;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+ }
+ ::-webkit-scrollbar-thumb {
+  background: linear-gradient(160deg, #c565d6 14%,#c616f2 80%);
+  border-radius: 15px;
+ }
+ ::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(13deg, #f9d4ff 0%,#c7ceff 14%);
+ }
+ ::-webkit-scrollbar-track{
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: inset 7px 10px 12px #f0f0f0;
+ }
+
+
+
+/*=======================Links & Buttons =================================*/
+.button{
+  width:200px;
+  display: flex;
+  align-items: center;
+  color:rgb(7, 75, 7);
+  font-weight: bold;
+  font-size:15pt;
+  text-decoration: none;
+}
+.button:hover{
+  color:rgb(22, 207, 22);
+}
+.button span{
+  margin-top:-7px;
+ font-size:40pt;
+
+}
+
+.button.cancel{
+  border:2px solid rgb(231, 58, 58);
+  color: rgb(228, 27, 27);
+
+  padding:16px;
+
+}
+
+button{
+  position: relative;
+  width:100%;
+  height:60px;
+
+  border:none;
+  outline:0;
+  cursor:pointer;
+
+  font-size:19px;
+  font-weight: bold;
+  color:rgb(255, 255, 255);
+  overflow:hidden;
+
+  background-color:rgb(186, 132, 223);
+  
+}
+
+
+button:hover{
+  background-color:rgb(156, 40, 233);
+}
+
+
+
+
+/*=======================Tabela=================================*/
+
+
+section.tabela table {
+  width: 100%;
+  text-align: left;
+  margin-top: 30px;
+  padding: 4%;
+  border-collapse: collapse;
+
+}
+
+section.tabela  {
+ height:500px;
+ overflow-y: hidden;
+
+}
+section.tabela:hover{
+  overflow-y: auto;
+ 
+ }
+
+section.tabela table th {
+  border: 1px solid white;
+  height: 90px;
+  padding: 4%;
+}
+
+section.tabela table td {
+  padding: 4%;
+  border-bottom: 5px solid rgb(253, 253, 253);
+  height: 90px;
+  background-color: rgba(204, 204, 204, 0.233);
+}
+
+tbody tr td:First-child{
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+  
+}
+tbody tr td:last-child{
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+  
+}
+section.tabela table tbody {
+height: 1000px;
+}
+tbody tr:hover{
+  background-color:rgba(157, 135, 172, 0.609);
+}
+
+
+.income{
+  color:red;
+  font-weight: bold;
+}
+.expense{
+  color:rgb(45, 189, 45);
+  font-weight: bold;
+}
+
+tbody td > img{
+  width:30px;
+  color:red;
+  cursor:pointer }
+
+/*=======================Modal=================================*/
+
+.modal-container{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+
+  position:fixed;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100vh;
+  padding:4%;
+
+  background-color: rgba(61, 59, 59, 0.76);
+  filter:brightness(50px);
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-container.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal{
+  padding:5%;
+  background-color: rgb(204, 204, 204);
+  
+}
+
+.form{
+  max-width: 500px;
+
+}
+
+.form h2{
+  margin-top:0;
+  Color:rgb(159, 72, 218);
+}
+
+input{
+  width:100%;
+  height:60px;
+  border:none;
+  outline:none;
+  padding:10px;
+  border-radius:0.5rem;
+  color:black;
+  font-size:15pt;
+}
+
+.input-group{
+  margin-top:0.8rem;
+}
+
+form small{
+  opacity:0.5;
+  font-size:18px;
+}
+
+small:hover{
+  color:rgb(241, 0, 0);
+}
+.input-group.ações{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:30px auto;
+}
+
+.input-group.ações .button,
+.input-group.ações button {
+  width:48%;
+  display:block;
+  text-align: center;
+  border-radius:0.5rem;
+}
+
+/*=======================Rodapé=================================*/
+footer.final {
+  width: 100%;
+  text-align: center;
+  color: rgb(146, 141, 141);
+  padding: 4%;
+}
+
+
+/*=======================Responsive=================================*/
+@media screen and (max-width:900px) { 
+  
+  main.Meio section.content {
+    flex-direction: column;
+    
+    
+  }
+  section.content .card {
+    width:100%;
+    margin: 20pt auto
+  }
+
+  header.inicial {
+    width:100%;
+    background-size:cover;
+    font-size:12vw;
+    
+  
+}
+
+
+section.tabela{
+ overflow-x: auto;
+}
+
+
+ }
+
+
+ 
