@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>C.finances</title>
+  </head>
+  <body>
+    <header class="inicial">
+        <h3>C.finance$</h3>
+    </header>
+    <!--incial-->
+
+    <main class="Meio">
+      <div class="container">
+        <h2 class="sr-only">Balanços</h2>
+
+        <section class="content">
+          <div class="card">
+            <h3>
+              <span>Entradas</span>
+              <img
+                id="img1"
+                src="imagens/arrow-alt-circle-up-solid.svg"
+                alt="Imagem de Entradas "
+              />
+            </h3>
+            <p id="entradas-display">R$ 0,00</p>
+          </div>
+          <!--card -->
+
+          <div class="card red">
+            <h3>
+              <span>Saidas</span>
+              <img
+                id="img1"
+                src="imagens/arrow-circle-down-solid.svg"
+                alt="Imagem de Saidas"
+              />
+            </h3>
+            <p id="saidas-display">R$ 0,00</p>
+          </div>
+          <!--card -->
+
+          <div id="Status" class="card">
+            <h3>
+              <span>Saldo</span>
+              <img
+                id="img1"
+                src="imagens/dollar-sign-solid.svg"
+                alt="Imagem de Total"
+              />
+            </h3>
+            <p id="saldo-display">R$ 0,00</p>
+          </div>
+          <!--card -->
+        </section>
+        <!--content-->
+
+        <h2 class="sr-only">Transações</h2>
+
+        <a href="#" onclick="Modal.Open()" class="button new"><span>+</span>Nova transação</a>
+
+        <section class="tabela">
+          <table id="date-table">
+            <thead>
+              <tr>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th>Data</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody>
+             
+            </tbody>
+          </table>
+        </section> <!--tabela-->
+       
+      </div> <!--container-->
+     
+    </main><!--Meio-->
+    
+
+    <div class="modal-container">
+      <div class="modal">
+
+        <div class="form">
+          <h2>Nova Transação</h2>
+
+          <form action="" onsubmit="Form.submit(event)">
+            <div class="input-group">
+              <lebel class="sr-only" for="description">Descrição</lebel>
+              <input
+                type="text"
+                placeholder="Descrição"
+             
+                id="description"
+                name="description" />
+             
+            </div><!--input-group-->
+            
+
+            <div class="input-group">
+              <lebel class="sr-only" for="amount">Valor</lebel>
+              <input
+                type="number"
+                step="0.01"
+         
+                placeholder="R$ 0.00 "
+                id="amount"
+                name="amount"/>
+              
+            </div><!--input-group-->
+            
+            <small class="ajuda"
+              >Use o Sinal de - (negativo) para despesas e , (Virgula) para
+              casa decimal</small>
+
+              <div class="input-group">
+                <lebel class="sr-only" for="date">Data</lebel>
+                <input
+                  type="date"
+                  placeholder="Data"
+           
+                  id="date"
+                  name="date" />
+               
+              </div><!--input-group-->
+
+              <div class="input-group ações">
+                <a href="#" onclick="Modal.Close()" class="button cancel">Cancelar</a>
+                <button>Salvar</button>
+              </div><!--input-group ações-->
+            
+          </form>
+        </div>
+        <!--form-->
+      </div>
+      <!--modal-->
+    </div>
+    <!--modal-container-->
+
+    <footer class="final">
+      <div class="container">
+        <h2>C.Finance$</h2>
+      </div>
+      <!--final-->
+    </footer>
+
+    <script src="js/functions.js"></script>
+  </body>
+</html>
